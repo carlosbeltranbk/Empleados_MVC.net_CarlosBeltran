@@ -24,7 +24,6 @@ namespace CatalogoEmpleados_CarlosBeltran.Models.ViewModels
         [Required]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        DateTime ahora = DateTime.Now;
         [Display(Name = "Fecha de nacimiento")]
         public DateTime FechaNacimiento { get; set; }
         [Required]
