@@ -1,0 +1,46 @@
+﻿@model CatalogoEmpleados_CarlosBeltran.Models.ViewModels.TablaViewModel
+@{
+    ViewBag.Title = "Registrar empleado";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("NuevoEmpleado", "Empleado", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-12">
+            @Html.LabelFor(d => d.Nombre)
+            @Html.TextBoxFor(d => d.Nombre, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.Nombre, null, new { @class = "alert-danger" })
+            <br />
+            @Html.LabelFor(d => d.Apellido1)
+            @Html.TextBoxFor(d => d.Apellido1, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.Apellido1, null, new { @class = "alert-danger" })
+            <br />
+            @Html.LabelFor(d => d.Apellido2)
+            @Html.TextBoxFor(d => d.Apellido2, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.Apellido2, null, new { @class = "alert-danger" })
+            <br />
+            <br />
+
+            @Html.LabelFor(d => d.FechaNacimiento)
+            @Html.EditorFor(d => d.FechaNacimiento, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.FechaNacimiento, null, new { @class = "alert-danger" })
+            <br />
+            <br />
+            @Html.LabelFor(d => d.Sueldo)
+            @Html.TextBoxFor(d => d.Sueldo, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.Sueldo, null, new { @class = "alert-danger" })
+            <br />
+            @Html.LabelFor(d => d.Departamento)
+            @Html.TextBoxFor(d => d.Departamento, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.Departamento, null, new { @class = "alert-danger" })
+
+            <div style="text-align:right;">
+                <input value="Registrar" type="submit" class="btn btn-success" />
+            </div>
+
+        </div>
+    </div>
+}
+
